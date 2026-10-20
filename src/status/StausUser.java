@@ -9,26 +9,32 @@ package status;
  * MidTerm-Exam
  * @author srinivsi
  */
+
+// enum is great because it is easier to store and maintain code than other methods
 public class StausUser 
 {
-   public void statusDetail(String code)
-{
-switch(code.toUpperCase())
-        {
-        case "ZERO": System.out.println("REJECTED");
-        break;
-        case "ONE": System.out.println("PENDING");
-        break;
-        case "TWO":
-        System.out.println("PROCESSING");
-        break;
-        case "THREE": 
+   public void statusDetail(StatusCode code)
+    {
+        switch (code) {
+        case ZERO:
+            System.out.println("REJECTED");
+            break;
+
+        case ONE:
+            System.out.println("PENDING");
+            break;
+
+        case TWO:
+            System.out.println("PROCESSING");
+            break;
+
+        case THREE:
             System.out.println("APPROVED");
-        break;
+            break;
+
         default:
-         System.out.println("NOT VALID CODE");
-        break;
+            System.out.println("NOT VALID CODE");
+            break;
         }
-}
- 
+    }
 }
