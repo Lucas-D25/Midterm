@@ -16,6 +16,9 @@ import java.util.Scanner;
  * then print the status details. 
  * @author srinivsi 
  */
+
+// MADE MY LUCAS DORATA
+
 public class Status {
 
     /**
@@ -23,11 +26,16 @@ public class Status {
      */
     public static void main(String[] args)
     {
+        
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
+    
+    String input = in.next().toUpperCase();
+    StatusCode code = StatusCode.valueOf(input);
+    
     StausUser t= new StausUser();
     t.statusDetail(code); 
+    in.close();
     }
     
 }
